@@ -10,19 +10,17 @@ using System.Windows.Forms;
 
 namespace pryGestorClientesLab2
 {
-    public partial class frmListadoClientes : Form
+    public partial class frmClientesDeudores : Form
     {
-        public frmListadoClientes()
+        public frmClientesDeudores()
         {
             InitializeComponent();
         }
         clsArchivoClientes x = new clsArchivoClientes();
-        private void frmListadoClientes_Load(object sender, EventArgs e)
+        private void frmClientesDeudores_Load(object sender, EventArgs e)
         {
-            x.Listar(dgvClientes);
-            lblCantidadClientes.Text= x.CantidadClientes().ToString();
-            lblTotalDeuda.Text = x.PromedioDeuda().ToString();
-            lblPromedio.Text= x.PromedioDeuda2().ToString();
+           
+            x.ListarDeudores(dgvClientes);  
         }
     }
 }

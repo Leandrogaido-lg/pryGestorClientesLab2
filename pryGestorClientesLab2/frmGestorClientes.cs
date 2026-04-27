@@ -22,5 +22,17 @@ namespace pryGestorClientesLab2
             Form formulario = new frmCargarClientes();
             formulario.Show();
         }
+
+        private void listadoDeTodosLosClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListadoClientes formulario = new frmListadoClientes();
+            formulario.Show();
+        }
+
+        private void listadoDeTodosLosDeudoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmClientesDeudores formulario = new frmClientesDeudores();
+            formulario.Show();
+        }
     }
 }
