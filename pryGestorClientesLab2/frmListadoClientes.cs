@@ -20,9 +20,16 @@ namespace pryGestorClientesLab2
         private void frmListadoClientes_Load(object sender, EventArgs e)
         {
             x.Listar(dgvClientes);
-            lblCantidadClientes.Text= x.CantidadClientes().ToString();
-            lblTotalDeuda.Text = x.PromedioDeuda().ToString();
-            lblPromedio.Text= x.PromedioDeuda2().ToString();
+            lblCantidadRTA.Text= x.CantidadClientes().ToString();
+            lblTotalRTA.Text = x.TotalDeuda().ToString();
+            lblPromedioRTA.Text= x.PromedioDeuda().ToString();
+        }
+        
+
+        private void btnReportar_Click(object sender, EventArgs e)
+        {
+            x.GenerarReporte();
+            MessageBox.Show("Reporte generado");
         }
     }
 }

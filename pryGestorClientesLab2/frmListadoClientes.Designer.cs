@@ -29,28 +29,28 @@
         private void InitializeComponent()
         {
             this.gbListado = new System.Windows.Forms.GroupBox();
+            this.lblPromedio = new System.Windows.Forms.Label();
+            this.lblCantidadClientes = new System.Windows.Forms.Label();
+            this.lblTotalDeuda = new System.Windows.Forms.Label();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblTotalDeuda = new System.Windows.Forms.Label();
-            this.lblCantidadClientes = new System.Windows.Forms.Label();
-            this.lblPromedio = new System.Windows.Forms.Label();
-            this.txtPromedio = new System.Windows.Forms.TextBox();
-            this.txtCantidad = new System.Windows.Forms.TextBox();
-            this.txtTotal = new System.Windows.Forms.TextBox();
-            this.btnListar = new System.Windows.Forms.Button();
+            this.btnReportar = new System.Windows.Forms.Button();
+            this.lblTotalRTA = new System.Windows.Forms.Label();
+            this.lblCantidadRTA = new System.Windows.Forms.Label();
+            this.lblPromedioRTA = new System.Windows.Forms.Label();
             this.gbListado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // gbListado
             // 
-            this.gbListado.Controls.Add(this.btnListar);
-            this.gbListado.Controls.Add(this.txtTotal);
-            this.gbListado.Controls.Add(this.txtCantidad);
-            this.gbListado.Controls.Add(this.txtPromedio);
+            this.gbListado.Controls.Add(this.lblPromedioRTA);
+            this.gbListado.Controls.Add(this.lblCantidadRTA);
+            this.gbListado.Controls.Add(this.lblTotalRTA);
+            this.gbListado.Controls.Add(this.btnReportar);
             this.gbListado.Controls.Add(this.lblPromedio);
             this.gbListado.Controls.Add(this.lblCantidadClientes);
             this.gbListado.Controls.Add(this.lblTotalDeuda);
@@ -61,6 +61,33 @@
             this.gbListado.TabIndex = 0;
             this.gbListado.TabStop = false;
             this.gbListado.Text = "Consulta de Datos";
+            // 
+            // lblPromedio
+            // 
+            this.lblPromedio.AutoSize = true;
+            this.lblPromedio.Location = new System.Drawing.Point(333, 370);
+            this.lblPromedio.Name = "lblPromedio";
+            this.lblPromedio.Size = new System.Drawing.Size(101, 13);
+            this.lblPromedio.TabIndex = 3;
+            this.lblPromedio.Text = "Promedio de Deuda";
+            // 
+            // lblCantidadClientes
+            // 
+            this.lblCantidadClientes.AutoSize = true;
+            this.lblCantidadClientes.Location = new System.Drawing.Point(333, 332);
+            this.lblCantidadClientes.Name = "lblCantidadClientes";
+            this.lblCantidadClientes.Size = new System.Drawing.Size(104, 13);
+            this.lblCantidadClientes.TabIndex = 2;
+            this.lblCantidadClientes.Text = "Cantidad de Clientes";
+            // 
+            // lblTotalDeuda
+            // 
+            this.lblTotalDeuda.AutoSize = true;
+            this.lblTotalDeuda.Location = new System.Drawing.Point(356, 293);
+            this.lblTotalDeuda.Name = "lblTotalDeuda";
+            this.lblTotalDeuda.Size = new System.Drawing.Size(81, 13);
+            this.lblTotalDeuda.TabIndex = 1;
+            this.lblTotalDeuda.Text = "Total de Deuda";
             // 
             // dgvClientes
             // 
@@ -99,62 +126,39 @@
             this.Column4.Name = "Column4";
             this.Column4.Width = 125;
             // 
-            // lblTotalDeuda
+            // btnReportar
             // 
-            this.lblTotalDeuda.AutoSize = true;
-            this.lblTotalDeuda.Location = new System.Drawing.Point(356, 293);
-            this.lblTotalDeuda.Name = "lblTotalDeuda";
-            this.lblTotalDeuda.Size = new System.Drawing.Size(81, 13);
-            this.lblTotalDeuda.TabIndex = 1;
-            this.lblTotalDeuda.Text = "Total de Deuda";
+            this.btnReportar.Location = new System.Drawing.Point(468, 396);
+            this.btnReportar.Name = "btnReportar";
+            this.btnReportar.Size = new System.Drawing.Size(75, 23);
+            this.btnReportar.TabIndex = 8;
+            this.btnReportar.Text = "Reportar";
+            this.btnReportar.UseVisualStyleBackColor = true;
+            this.btnReportar.Click += new System.EventHandler(this.btnReportar_Click);
             // 
-            // lblCantidadClientes
+            // lblTotalRTA
             // 
-            this.lblCantidadClientes.AutoSize = true;
-            this.lblCantidadClientes.Location = new System.Drawing.Point(333, 332);
-            this.lblCantidadClientes.Name = "lblCantidadClientes";
-            this.lblCantidadClientes.Size = new System.Drawing.Size(104, 13);
-            this.lblCantidadClientes.TabIndex = 2;
-            this.lblCantidadClientes.Text = "Cantidad de Clientes";
+            this.lblTotalRTA.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTotalRTA.Location = new System.Drawing.Point(443, 292);
+            this.lblTotalRTA.Name = "lblTotalRTA";
+            this.lblTotalRTA.Size = new System.Drawing.Size(100, 23);
+            this.lblTotalRTA.TabIndex = 9;
             // 
-            // lblPromedio
+            // lblCantidadRTA
             // 
-            this.lblPromedio.AutoSize = true;
-            this.lblPromedio.Location = new System.Drawing.Point(333, 370);
-            this.lblPromedio.Name = "lblPromedio";
-            this.lblPromedio.Size = new System.Drawing.Size(101, 13);
-            this.lblPromedio.TabIndex = 3;
-            this.lblPromedio.Text = "Promedio de Deuda";
+            this.lblCantidadRTA.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCantidadRTA.Location = new System.Drawing.Point(443, 331);
+            this.lblCantidadRTA.Name = "lblCantidadRTA";
+            this.lblCantidadRTA.Size = new System.Drawing.Size(100, 23);
+            this.lblCantidadRTA.TabIndex = 10;
             // 
-            // txtPromedio
+            // lblPromedioRTA
             // 
-            this.txtPromedio.Location = new System.Drawing.Point(443, 370);
-            this.txtPromedio.Name = "txtPromedio";
-            this.txtPromedio.Size = new System.Drawing.Size(100, 20);
-            this.txtPromedio.TabIndex = 4;
-            // 
-            // txtCantidad
-            // 
-            this.txtCantidad.Location = new System.Drawing.Point(443, 329);
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(100, 20);
-            this.txtCantidad.TabIndex = 5;
-            // 
-            // txtTotal
-            // 
-            this.txtTotal.Location = new System.Drawing.Point(443, 293);
-            this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(100, 20);
-            this.txtTotal.TabIndex = 6;
-            // 
-            // btnListar
-            // 
-            this.btnListar.Location = new System.Drawing.Point(468, 396);
-            this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(75, 23);
-            this.btnListar.TabIndex = 7;
-            this.btnListar.Text = "Listar";
-            this.btnListar.UseVisualStyleBackColor = true;
+            this.lblPromedioRTA.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblPromedioRTA.Location = new System.Drawing.Point(443, 369);
+            this.lblPromedioRTA.Name = "lblPromedioRTA";
+            this.lblPromedioRTA.Size = new System.Drawing.Size(100, 23);
+            this.lblPromedioRTA.TabIndex = 11;
             // 
             // frmListadoClientes
             // 
@@ -180,12 +184,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.TextBox txtTotal;
-        private System.Windows.Forms.TextBox txtCantidad;
-        private System.Windows.Forms.TextBox txtPromedio;
         private System.Windows.Forms.Label lblPromedio;
         private System.Windows.Forms.Label lblCantidadClientes;
         private System.Windows.Forms.Label lblTotalDeuda;
-        private System.Windows.Forms.Button btnListar;
+        private System.Windows.Forms.Button btnReportar;
+        private System.Windows.Forms.Label lblPromedioRTA;
+        private System.Windows.Forms.Label lblCantidadRTA;
+        private System.Windows.Forms.Label lblTotalRTA;
     }
 }

@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnCargar = new System.Windows.Forms.Button();
-            this.lblCodigo = new System.Windows.Forms.Label();
-            this.lblDeuda = new System.Windows.Forms.Label();
-            this.lblNombreApellido = new System.Windows.Forms.Label();
-            this.lblLimiteCredito = new System.Windows.Forms.Label();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.txtDeuda = new System.Windows.Forms.TextBox();
-            this.txtNombreApellido = new System.Windows.Forms.TextBox();
             this.txtLimiteCredito = new System.Windows.Forms.TextBox();
+            this.txtNombreApellido = new System.Windows.Forms.TextBox();
+            this.txtDeuda = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.lblLimiteCredito = new System.Windows.Forms.Label();
+            this.lblNombreApellido = new System.Windows.Forms.Label();
+            this.lblDeuda = new System.Windows.Forms.Label();
+            this.lblCodigo = new System.Windows.Forms.Label();
+            this.btnCargar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,42 +59,37 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Carga de Datos";
             // 
-            // btnCargar
+            // txtLimiteCredito
             // 
-            this.btnCargar.Location = new System.Drawing.Point(484, 188);
-            this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(75, 23);
-            this.btnCargar.TabIndex = 0;
-            this.btnCargar.Text = "Cargar";
-            this.btnCargar.UseVisualStyleBackColor = true;
-            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
+            this.txtLimiteCredito.Location = new System.Drawing.Point(431, 106);
+            this.txtLimiteCredito.Name = "txtLimiteCredito";
+            this.txtLimiteCredito.Size = new System.Drawing.Size(100, 20);
+            this.txtLimiteCredito.TabIndex = 8;
+            this.txtLimiteCredito.TextChanged += new System.EventHandler(this.txtLimiteCredito_TextChanged);
             // 
-            // lblCodigo
+            // txtNombreApellido
             // 
-            this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(62, 56);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(40, 13);
-            this.lblCodigo.TabIndex = 1;
-            this.lblCodigo.Text = "Codigo";
+            this.txtNombreApellido.Location = new System.Drawing.Point(431, 53);
+            this.txtNombreApellido.Name = "txtNombreApellido";
+            this.txtNombreApellido.Size = new System.Drawing.Size(100, 20);
+            this.txtNombreApellido.TabIndex = 7;
+            this.txtNombreApellido.TextChanged += new System.EventHandler(this.txtNombreApellido_TextChanged);
             // 
-            // lblDeuda
+            // txtDeuda
             // 
-            this.lblDeuda.AutoSize = true;
-            this.lblDeuda.Location = new System.Drawing.Point(62, 96);
-            this.lblDeuda.Name = "lblDeuda";
-            this.lblDeuda.Size = new System.Drawing.Size(39, 13);
-            this.lblDeuda.TabIndex = 2;
-            this.lblDeuda.Text = "Deuda";
+            this.txtDeuda.Location = new System.Drawing.Point(123, 93);
+            this.txtDeuda.Name = "txtDeuda";
+            this.txtDeuda.Size = new System.Drawing.Size(100, 20);
+            this.txtDeuda.TabIndex = 6;
+            this.txtDeuda.TextChanged += new System.EventHandler(this.txtDeuda_TextChanged);
             // 
-            // lblNombreApellido
+            // txtCodigo
             // 
-            this.lblNombreApellido.AutoSize = true;
-            this.lblNombreApellido.Location = new System.Drawing.Point(340, 56);
-            this.lblNombreApellido.Name = "lblNombreApellido";
-            this.lblNombreApellido.Size = new System.Drawing.Size(92, 13);
-            this.lblNombreApellido.TabIndex = 3;
-            this.lblNombreApellido.Text = "Nombre y Apellido";
+            this.txtCodigo.Location = new System.Drawing.Point(123, 49);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(100, 20);
+            this.txtCodigo.TabIndex = 5;
+            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
             // lblLimiteCredito
             // 
@@ -105,33 +100,42 @@
             this.lblLimiteCredito.TabIndex = 4;
             this.lblLimiteCredito.Text = "Limite de Credito";
             // 
-            // txtCodigo
+            // lblNombreApellido
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(123, 49);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(100, 20);
-            this.txtCodigo.TabIndex = 5;
+            this.lblNombreApellido.AutoSize = true;
+            this.lblNombreApellido.Location = new System.Drawing.Point(340, 56);
+            this.lblNombreApellido.Name = "lblNombreApellido";
+            this.lblNombreApellido.Size = new System.Drawing.Size(92, 13);
+            this.lblNombreApellido.TabIndex = 3;
+            this.lblNombreApellido.Text = "Nombre y Apellido";
             // 
-            // txtDeuda
+            // lblDeuda
             // 
-            this.txtDeuda.Location = new System.Drawing.Point(123, 93);
-            this.txtDeuda.Name = "txtDeuda";
-            this.txtDeuda.Size = new System.Drawing.Size(100, 20);
-            this.txtDeuda.TabIndex = 6;
+            this.lblDeuda.AutoSize = true;
+            this.lblDeuda.Location = new System.Drawing.Point(62, 96);
+            this.lblDeuda.Name = "lblDeuda";
+            this.lblDeuda.Size = new System.Drawing.Size(39, 13);
+            this.lblDeuda.TabIndex = 2;
+            this.lblDeuda.Text = "Deuda";
             // 
-            // txtNombreApellido
+            // lblCodigo
             // 
-            this.txtNombreApellido.Location = new System.Drawing.Point(431, 53);
-            this.txtNombreApellido.Name = "txtNombreApellido";
-            this.txtNombreApellido.Size = new System.Drawing.Size(100, 20);
-            this.txtNombreApellido.TabIndex = 7;
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Location = new System.Drawing.Point(62, 56);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(40, 13);
+            this.lblCodigo.TabIndex = 1;
+            this.lblCodigo.Text = "Codigo";
             // 
-            // txtLimiteCredito
+            // btnCargar
             // 
-            this.txtLimiteCredito.Location = new System.Drawing.Point(431, 106);
-            this.txtLimiteCredito.Name = "txtLimiteCredito";
-            this.txtLimiteCredito.Size = new System.Drawing.Size(100, 20);
-            this.txtLimiteCredito.TabIndex = 8;
+            this.btnCargar.Location = new System.Drawing.Point(484, 188);
+            this.btnCargar.Name = "btnCargar";
+            this.btnCargar.Size = new System.Drawing.Size(75, 23);
+            this.btnCargar.TabIndex = 0;
+            this.btnCargar.Text = "Cargar";
+            this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // frmCargarClientes
             // 

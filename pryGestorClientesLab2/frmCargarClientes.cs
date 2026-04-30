@@ -21,6 +21,46 @@ namespace pryGestorClientesLab2
         private void btnCargar_Click(object sender, EventArgs e)
         {
            x.Grabar(txtCodigo.Text, txtNombreApellido.Text, txtDeuda.Text, txtLimiteCredito.Text); 
+            MessageBox.Show("Cliente cargado");
+
+            txtCodigo.Text = "";    
+            txtNombreApellido.Text = "";
+            txtDeuda.Text = "";
+            txtLimiteCredito.Text = "";
+
+        }
+
+        private void Comprobar()
+        {
+            if (txtCodigo.Text != "" && txtNombreApellido.Text != "" && txtDeuda.Text != "" && txtLimiteCredito.Text != "")
+            {
+               
+                btnCargar.Enabled = true;
+            }
+            else
+            {
+                btnCargar.Enabled = false;
+            }
+        }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+            Comprobar();
+        }
+
+        private void txtDeuda_TextChanged(object sender, EventArgs e)
+        {
+            Comprobar();
+        }
+
+        private void txtNombreApellido_TextChanged(object sender, EventArgs e)
+        {
+            Comprobar();
+        }
+
+        private void txtLimiteCredito_TextChanged(object sender, EventArgs e)
+        {
+            Comprobar();
         }
     }
 }
