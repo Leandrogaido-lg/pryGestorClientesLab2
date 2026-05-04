@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.gbListado = new System.Windows.Forms.GroupBox();
+            this.lblPromedioRTA = new System.Windows.Forms.Label();
+            this.lblCantidadRTA = new System.Windows.Forms.Label();
+            this.lblTotalRTA = new System.Windows.Forms.Label();
+            this.btnReportar = new System.Windows.Forms.Button();
             this.lblPromedio = new System.Windows.Forms.Label();
             this.lblCantidadClientes = new System.Windows.Forms.Label();
             this.lblTotalDeuda = new System.Windows.Forms.Label();
@@ -37,10 +41,7 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnReportar = new System.Windows.Forms.Button();
-            this.lblTotalRTA = new System.Windows.Forms.Label();
-            this.lblCantidadRTA = new System.Windows.Forms.Label();
-            this.lblPromedioRTA = new System.Windows.Forms.Label();
+            this.btnOrdenar = new System.Windows.Forms.Button();
             this.gbListado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
@@ -61,6 +62,40 @@
             this.gbListado.TabIndex = 0;
             this.gbListado.TabStop = false;
             this.gbListado.Text = "Consulta de Datos";
+            // 
+            // lblPromedioRTA
+            // 
+            this.lblPromedioRTA.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblPromedioRTA.Location = new System.Drawing.Point(443, 369);
+            this.lblPromedioRTA.Name = "lblPromedioRTA";
+            this.lblPromedioRTA.Size = new System.Drawing.Size(100, 23);
+            this.lblPromedioRTA.TabIndex = 11;
+            // 
+            // lblCantidadRTA
+            // 
+            this.lblCantidadRTA.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCantidadRTA.Location = new System.Drawing.Point(443, 331);
+            this.lblCantidadRTA.Name = "lblCantidadRTA";
+            this.lblCantidadRTA.Size = new System.Drawing.Size(100, 23);
+            this.lblCantidadRTA.TabIndex = 10;
+            // 
+            // lblTotalRTA
+            // 
+            this.lblTotalRTA.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTotalRTA.Location = new System.Drawing.Point(443, 292);
+            this.lblTotalRTA.Name = "lblTotalRTA";
+            this.lblTotalRTA.Size = new System.Drawing.Size(100, 23);
+            this.lblTotalRTA.TabIndex = 9;
+            // 
+            // btnReportar
+            // 
+            this.btnReportar.Location = new System.Drawing.Point(468, 396);
+            this.btnReportar.Name = "btnReportar";
+            this.btnReportar.Size = new System.Drawing.Size(75, 23);
+            this.btnReportar.TabIndex = 8;
+            this.btnReportar.Text = "Reportar";
+            this.btnReportar.UseVisualStyleBackColor = true;
+            this.btnReportar.Click += new System.EventHandler(this.btnReportar_Click);
             // 
             // lblPromedio
             // 
@@ -126,45 +161,22 @@
             this.Column4.Name = "Column4";
             this.Column4.Width = 125;
             // 
-            // btnReportar
+            // btnOrdenar
             // 
-            this.btnReportar.Location = new System.Drawing.Point(468, 396);
-            this.btnReportar.Name = "btnReportar";
-            this.btnReportar.Size = new System.Drawing.Size(75, 23);
-            this.btnReportar.TabIndex = 8;
-            this.btnReportar.Text = "Reportar";
-            this.btnReportar.UseVisualStyleBackColor = true;
-            this.btnReportar.Click += new System.EventHandler(this.btnReportar_Click);
-            // 
-            // lblTotalRTA
-            // 
-            this.lblTotalRTA.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblTotalRTA.Location = new System.Drawing.Point(443, 292);
-            this.lblTotalRTA.Name = "lblTotalRTA";
-            this.lblTotalRTA.Size = new System.Drawing.Size(100, 23);
-            this.lblTotalRTA.TabIndex = 9;
-            // 
-            // lblCantidadRTA
-            // 
-            this.lblCantidadRTA.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblCantidadRTA.Location = new System.Drawing.Point(443, 331);
-            this.lblCantidadRTA.Name = "lblCantidadRTA";
-            this.lblCantidadRTA.Size = new System.Drawing.Size(100, 23);
-            this.lblCantidadRTA.TabIndex = 10;
-            // 
-            // lblPromedioRTA
-            // 
-            this.lblPromedioRTA.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblPromedioRTA.Location = new System.Drawing.Point(443, 369);
-            this.lblPromedioRTA.Name = "lblPromedioRTA";
-            this.lblPromedioRTA.Size = new System.Drawing.Size(100, 23);
-            this.lblPromedioRTA.TabIndex = 11;
+            this.btnOrdenar.Location = new System.Drawing.Point(399, 408);
+            this.btnOrdenar.Name = "btnOrdenar";
+            this.btnOrdenar.Size = new System.Drawing.Size(75, 23);
+            this.btnOrdenar.TabIndex = 12;
+            this.btnOrdenar.Text = "Ordenar";
+            this.btnOrdenar.UseVisualStyleBackColor = true;
+            this.btnOrdenar.Click += new System.EventHandler(this.btnOrdenar_Click);
             // 
             // frmListadoClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(573, 440);
+            this.Controls.Add(this.btnOrdenar);
             this.Controls.Add(this.gbListado);
             this.Name = "frmListadoClientes";
             this.Text = "Listado de Clientes";
@@ -191,5 +203,6 @@
         private System.Windows.Forms.Label lblPromedioRTA;
         private System.Windows.Forms.Label lblCantidadRTA;
         private System.Windows.Forms.Label lblTotalRTA;
+        private System.Windows.Forms.Button btnOrdenar;
     }
 }

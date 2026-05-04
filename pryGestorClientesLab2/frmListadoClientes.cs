@@ -31,5 +31,10 @@ namespace pryGestorClientesLab2
             x.GenerarReporte();
             MessageBox.Show("Reporte generado");
         }
+
+        private void btnOrdenar_Click(object sender, EventArgs e)
+        {
+            x.OrdenarArchivo();
+        }
     }
 }

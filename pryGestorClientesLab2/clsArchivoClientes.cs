@@ -11,11 +11,95 @@ namespace pryGestorClientesLab2
     internal class clsArchivoClientes
     {
         public string NombreArchivo = "Clientes.csv";
+        Decimal total = 0;
+         Int32 C = 0;
+
+        private struct RegClientes
+        {
+            public Int32 Codigo;
+            public String Nombre;
+            public Decimal Deuda;
+            public Decimal Limite;
+        }
+
+        private RegClientes[] VecClientes = new RegClientes[1500];
+        private Int32 IND = 0; 
         
+
+        private void CargarVector()
+        {
+            string DatosLeidos;
+            string[] VecDatos = new string[4];
+
+            StreamReader AD = new StreamReader(NombreArchivo);
+
+            DatosLeidos = AD.ReadLine();
+            
+            while (DatosLeidos != null)
+            {
+                VecDatos = DatosLeidos.Split(';');
+                VecClientes[IND].Codigo = Convert.ToInt32(VecDatos[0]);
+                VecClientes[IND].Nombre = VecDatos[1];
+                VecClientes[IND].Deuda = Convert.ToDecimal(VecDatos[2]);
+                VecClientes[IND].Limite = Convert.ToDecimal(VecDatos[3]);
+                IND++;
+                DatosLeidos = AD.ReadLine();
+            }
+
+            AD.Close();
+            AD.Dispose();
+
+
+        }
+
+        private void OrdenarVector()
+        {
+            RegClientes Aux; //crea una variable auxiliar para guardar el cliente actual
+
+            for (Int32 c = 0; c < IND - 1; c++)
+            {
+                for (Int32 i = 0; i < IND - 1; i++) //recorre el vector
+                {
+                    if (VecClientes[i].Codigo > VecClientes[i + 1].Codigo) //compara el codigo del cliente actual con el siguiente
+                    {
+
+                        Aux = VecClientes[i]; //guarda el cliente actual en la variable auxiliar
+                        VecClientes[i] = VecClientes[i + 1]; //asigna el cliente siguiente al cliente actual
+                        VecClientes[i + 1] = Aux; //asigna el cliente guardado en la variable auxiliar al cliente siguiente
+                    }
+
+                }
+            }
+        }
+
+        private void ReescribirArchivo()
+        {
+            StreamWriter AD = new StreamWriter(NombreArchivo, false);
+            for (Int32 i = 0; i < IND; i++)
+            {
+                AD.Write(VecClientes[i].Codigo);
+                AD.Write(";");
+                AD.Write(VecClientes[i].Nombre);
+                AD.Write(";");
+                AD.Write(VecClientes[i].Deuda);
+                AD.Write(";");
+                AD.WriteLine(VecClientes[i].Limite);
+            }
+            AD.Close();
+            AD.Dispose();
+        }
+
+        public void OrdenarArchivo()
+        {
+            CargarVector();
+            OrdenarVector();
+            ReescribirArchivo();
+        }
+
         public void Grabar(string cod, string nom, string deu, string lim)
         {
             //Abrir
-            StreamWriter AD = new StreamWriter(NombreArchivo);
+            StreamWriter AD = new StreamWriter(NombreArchivo, true);
             //CArgar o leer
             AD.Write(cod);
             AD.Write(";");
