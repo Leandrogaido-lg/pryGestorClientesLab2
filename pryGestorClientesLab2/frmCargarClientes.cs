@@ -62,5 +62,8 @@ namespace pryGestorClientesLab2
         {
             Comprobar();
         }
+
+        //private void frmCargarClientes_Load(object sender, EventArgs e)
+
     }
 }

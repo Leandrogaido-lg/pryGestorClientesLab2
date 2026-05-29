@@ -34,5 +34,16 @@ namespace pryGestorClientesLab2
             frmClientesDeudores formulario = new frmClientesDeudores();
             formulario.Show();
         }
+
+        private void datosDelDesarrolladorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDatosDelDesarrollador formulario = new frmDatosDelDesarrollador();
+            formulario.Show();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

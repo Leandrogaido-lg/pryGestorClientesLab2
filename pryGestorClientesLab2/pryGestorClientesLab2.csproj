@@ -59,6 +59,12 @@
     <Compile Include="frmClientesDeudores.Designer.cs">
       <DependentUpon>frmClientesDeudores.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDatosDelDesarrollador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDatosDelDesarrollador.Designer.cs">
+      <DependentUpon>frmDatosDelDesarrollador.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGestorClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,12 @@
     <Compile Include="frmListadoClientes.Designer.cs">
       <DependentUpon>frmListadoClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmListadoOrdenadoClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListadoOrdenadoClientes.Designer.cs">
+      <DependentUpon>frmListadoOrdenadoClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmCargarClientes.resx">
@@ -79,11 +91,17 @@
     <EmbeddedResource Include="frmClientesDeudores.resx">
       <DependentUpon>frmClientesDeudores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDatosDelDesarrollador.resx">
+      <DependentUpon>frmDatosDelDesarrollador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGestorClientes.resx">
       <DependentUpon>frmGestorClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListadoClientes.resx">
       <DependentUpon>frmListadoClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListadoOrdenadoClientes.resx">
+      <DependentUpon>frmListadoOrdenadoClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

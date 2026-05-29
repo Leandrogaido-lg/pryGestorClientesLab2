@@ -21,6 +21,9 @@ namespace pryGestorClientesLab2
         {
            
             x.ListarDeudores(dgvClientes);  
+            lblCantidadC.Text = (dgvClientes.Rows.Count - 1).ToString();
+            lblTotal.Text = x.DeudaClientes().ToString();
+            lblPromed.Text = x.PromedioDeuda().ToString();
         }
     }
 }
