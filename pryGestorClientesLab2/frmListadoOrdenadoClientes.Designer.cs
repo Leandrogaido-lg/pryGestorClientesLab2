@@ -67,9 +67,6 @@
             this.cmbModo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbModo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbModo.FormattingEnabled = true;
-            this.cmbModo.Items.AddRange(new object[] {
-            "Ascendente",
-            "Descendente"});
             this.cmbModo.Location = new System.Drawing.Point(493, 76);
             this.cmbModo.Name = "cmbModo";
             this.cmbModo.Size = new System.Drawing.Size(198, 26);
@@ -80,10 +77,6 @@
             this.cmbCampo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCampo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCampo.FormattingEnabled = true;
-            this.cmbCampo.Items.AddRange(new object[] {
-            "Código",
-            "Límite",
-            "Deuda"});
             this.cmbCampo.Location = new System.Drawing.Point(92, 76);
             this.cmbCampo.Name = "cmbCampo";
             this.cmbCampo.Size = new System.Drawing.Size(198, 26);
