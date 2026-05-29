@@ -30,13 +30,13 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.sistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.datosDelDesarrolladorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarNuevosClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoDeTodosLosClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoDeTodosLosDeudoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoOrdenadoDeClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.datosDelDesarrolladorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,6 +60,20 @@
             this.sistemaToolStripMenuItem.Name = "sistemaToolStripMenuItem";
             this.sistemaToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
             this.sistemaToolStripMenuItem.Text = "Sistema";
+            // 
+            // datosDelDesarrolladorToolStripMenuItem
+            // 
+            this.datosDelDesarrolladorToolStripMenuItem.Name = "datosDelDesarrolladorToolStripMenuItem";
+            this.datosDelDesarrolladorToolStripMenuItem.Size = new System.Drawing.Size(251, 26);
+            this.datosDelDesarrolladorToolStripMenuItem.Text = "Datos del Desarrollador";
+            this.datosDelDesarrolladorToolStripMenuItem.Click += new System.EventHandler(this.datosDelDesarrolladorToolStripMenuItem_Click);
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(251, 26);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // clientesToolStripMenuItem
             // 
@@ -98,20 +112,7 @@
             this.listadoOrdenadoDeClientesToolStripMenuItem.Name = "listadoOrdenadoDeClientesToolStripMenuItem";
             this.listadoOrdenadoDeClientesToolStripMenuItem.Size = new System.Drawing.Size(301, 26);
             this.listadoOrdenadoDeClientesToolStripMenuItem.Text = "Listado ordenado de clientes...";
-            // 
-            // datosDelDesarrolladorToolStripMenuItem
-            // 
-            this.datosDelDesarrolladorToolStripMenuItem.Name = "datosDelDesarrolladorToolStripMenuItem";
-            this.datosDelDesarrolladorToolStripMenuItem.Size = new System.Drawing.Size(251, 26);
-            this.datosDelDesarrolladorToolStripMenuItem.Text = "Datos del Desarrollador";
-            this.datosDelDesarrolladorToolStripMenuItem.Click += new System.EventHandler(this.datosDelDesarrolladorToolStripMenuItem_Click);
-            // 
-            // salirToolStripMenuItem
-            // 
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(251, 26);
-            this.salirToolStripMenuItem.Text = "Salir";
-            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            this.listadoOrdenadoDeClientesToolStripMenuItem.Click += new System.EventHandler(this.listadoOrdenadoDeClientesToolStripMenuItem_Click);
             // 
             // frmGestorClientes
             // 
@@ -121,7 +122,7 @@
             this.ClientSize = new System.Drawing.Size(967, 554);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmGestorClientes";
             this.Text = "Gestor de Clientes";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

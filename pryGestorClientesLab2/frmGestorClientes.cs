@@ -45,5 +45,11 @@ namespace pryGestorClientesLab2
         {
             this.Close();
         }
+
+        private void listadoOrdenadoDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListadoOrdenadoClientes formulario = new frmListadoOrdenadoClientes();
+            formulario.Show();  
+        }
     }
 }

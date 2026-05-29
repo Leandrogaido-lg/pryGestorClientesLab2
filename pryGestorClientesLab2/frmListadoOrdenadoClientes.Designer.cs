@@ -99,6 +99,7 @@
             this.btnListar.TabIndex = 13;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // lblTitulo
             // 
@@ -167,6 +168,7 @@
             this.Controls.Add(this.dgvListar);
             this.Name = "frmListadoOrdenadoClientes";
             this.Text = "frmListadoOrdenadoClientes";
+            this.Load += new System.EventHandler(this.frmListadoOrdenadoClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

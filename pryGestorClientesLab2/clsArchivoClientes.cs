@@ -304,6 +304,60 @@ namespace pryGestorClientesLab2
             reporte.Close();
             reporte.Dispose();
         }
+
+
+        public void ListarOrdenadoPersonalizado(DataGridView Grilla, string campo, string modo)
+        {
+            CargarVector(); 
+
+            RegClientes Aux;
+
+           
+            for (Int32 c = 0; c < IND - 1; c++)
+            {
+                for (Int32 i = 0; i < IND - 1; i++)
+                {
+                    bool mayor = false;
+                    bool menor = false;
+
+                 
+                    if (campo == "Código")
+                    {
+                        mayor = VecClientes[i].Codigo > VecClientes[i + 1].Codigo;
+                        menor = VecClientes[i].Codigo < VecClientes[i + 1].Codigo;
+                    }
+                    else if (campo == "Nombre")
+                    {
+                        mayor = string.Compare(VecClientes[i].Nombre, VecClientes[i + 1].Nombre) > 0;
+                        menor = string.Compare(VecClientes[i].Nombre, VecClientes[i + 1].Nombre) < 0;
+                    }
+                    else if (campo == "Deuda")
+                    {
+                        mayor = VecClientes[i].Deuda > VecClientes[i + 1].Deuda;
+                        menor = VecClientes[i].Deuda < VecClientes[i + 1].Deuda;
+                    }
+
+                    bool intercambiar = false;
+                    if (modo == "Ascendente" && mayor) intercambiar = true;
+                    if (modo == "Descendente" && menor) intercambiar = true;
+
+                   
+                    if (intercambiar)
+                    {
+                        Aux = VecClientes[i];
+                        VecClientes[i] = VecClientes[i + 1];
+                        VecClientes[i + 1] = Aux;
+                    }
+                }
+            }
+
+            
+            Grilla.Rows.Clear();
+            for (int i = 0; i < IND; i++)
+            {
+                Grilla.Rows.Add(VecClientes[i].Codigo, VecClientes[i].Nombre, VecClientes[i].Deuda, VecClientes[i].Limite);
+            }
+        }
     }
 
 
